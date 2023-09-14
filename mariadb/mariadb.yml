@@ -1,6 +1,6 @@
 ---
 - name: MariaDB From MariaDB.org
-  hosts: node1
+  hosts: node3
   become: True
   gather_facts: False
   tasks:
