@@ -1,0 +1,8 @@
+# MariaDB 10.4 [Stable] CentOS repository list - created 2020-07-27 07:52 UTC
+# https://mariadb.org/download-test/
+[mariadb]
+name = MariaDB
+baseurl = http://mirrors.coreix.net/mariadb/yum/10.4/centos8-amd64
+module_hotfixes=1
+gpgkey=http://mirrors.coreix.net/mariadb/yum/RPM-GPG-KEY-MariaDB
+gpgcheck=1

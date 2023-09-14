@@ -1,0 +1,23 @@
+---
+- name: MariaDB From MariaDB.org
+  hosts: node1
+  become: True
+  gather_facts: False
+  tasks:
+  - name: add repo
+    copy:
+      src: mariadb.repo
+      dest: /etc/yum.repos.d/mariadb.repo
+
+  - name: install mariadb
+    package:
+      name:
+      - MariaDB-server
+      - python3-PyMySQL
+
+  - name: start mariadb
+    service:
+      name: mariadb
+      state: started
+      enabled: true
+
